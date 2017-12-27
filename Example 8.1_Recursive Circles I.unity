@@ -228,9 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29379a7c9350a0247a05a514bb6f6372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertexCount: 20
+  vertexCount: 40
   lineWidth: 0.2
-  radius: 1.9
+  radius: 10
   circleFillscreen: 0
 --- !u!4 &1068129012
 Transform:
