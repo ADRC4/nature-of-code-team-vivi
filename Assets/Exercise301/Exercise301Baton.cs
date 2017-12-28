@@ -62,7 +62,7 @@ public class Exercise301Baton : MonoBehaviour
 
     void PaintBaton()
     {
-        Color _clolor = Color.white;
+        Color _color = Color.white;
 
         for (int x = 0; x < width; x++)
         {
@@ -73,14 +73,14 @@ public class Exercise301Baton : MonoBehaviour
                 //Color _color = (Vector2 .Distance(circlePoint,point1 ) <= radius) || (Vector2.Distance(circlePoint ,point2)<=radius ) ? Color.black : Color.white;
                 if (Vector2.Distance(circlePoint, point1) <= radius || Vector2.Distance(circlePoint, point2) <= radius)
                 {
-                    _clolor = Color.black;
+                    _color = Color.black;
                 }
                 else
                 {
-                    _clolor = Color.white;
+                    _color = Color.white;
                 }
 
-                image.SetPixel(x, y, _clolor);
+                //image.SetPixel(x, y, _clolor);
 
                 image.SetPixel(x, y, _clolor);
             }
