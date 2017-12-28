@@ -82,7 +82,7 @@ public class Exercise301Baton : MonoBehaviour
 
                 //image.SetPixel(x, y, _clolor);
 
-                image.SetPixel(x, y, _clolor);
+                image.SetPixel(x, y, _color);
             }
         }
 
