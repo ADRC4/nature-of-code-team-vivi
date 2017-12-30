@@ -15,7 +15,7 @@ public class RectMove : MonoBehaviour
         if (!hasArrived)
         {
             hasArrived = true;
-            float randX = Random.Range(-5.0f, 5.0f);
+            float randX = Random.Range(-10.0f, 10.0f);
             float randY = Random.Range(-5.0f, 5.0f);
             StartCoroutine(MoveToPoint(new Vector3(randX, randY, -1.504f)));
         }
