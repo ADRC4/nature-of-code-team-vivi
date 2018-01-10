@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonController : MonoBehaviour {
+public class Circle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
