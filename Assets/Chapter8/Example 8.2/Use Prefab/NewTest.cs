@@ -3,39 +3,35 @@
 using UnityEngine;
 using System.Collections;
 
-public class InstantiateCircles : MonoBehaviour
+public class NewTest : MonoBehaviour
 {
     public Transform prefab;
 
     float nextPosition = 0;
+    float NewPosition, PrevPosition;
+    float nextRadius;
     float diameter = 5f;
-    float nextDistance = 2.5f;
-    float FirstMove = 0;
-    float FirstPos;
+    float FirstMove;
     //scale the instantiated circle to half
-    Vector3 shrinkCircle=new Vector3 (0.5f,0.5f,0);
-   
-    
+    Vector3 shrinkCircle = new Vector3(0.5f, 0.5f, 0);
+
+
     void Start()
     {
         instantiateNextCircles();
-        
+
     }
 
     public void instantiateNextCircles()
     {
-        for (int i = 0; i < 3; i++)
+
+        for (int i = 1; i < 4; i++)
         {
-            //nextDistance /= nextDistance / 2;
-            //nextPosition = diameter / 2;
-            FirstMove += FirstMove + diameter / 2f;
-            
-            var instantiatedPrefab_Right = Instantiate(prefab, new Vector3(FirstPos, 0, 0), Quaternion.identity);
-
+            Vector3 pos = new Vector3();
+            var instantiatedPrefab_Right = Instantiate(prefab, pos, Quaternion.identity);
             instantiatedPrefab_Right.transform.localScale = shrinkCircle;
-
-           
         }
+          
 
         //var instantiatedPrefab_Left = Instantiate(prefab, new Vector3(nextPosition - radius / 2, 0, 0), Quaternion.identity);
         //instantiatedPrefab_Left.transform.localScale = shrinkCircle;
