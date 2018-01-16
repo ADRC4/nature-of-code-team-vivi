@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class simpleLsystem : MonoBehaviour
 
-{//ss
+{//sss
     private string axiom = "A";
     private string current;
 
