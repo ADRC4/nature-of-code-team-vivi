@@ -8,6 +8,7 @@ public class LineLine : MonoBehaviour {
 
     public Transform point0;
     public Transform point1;
+    public Transform point2;
 
 
 
@@ -21,8 +22,9 @@ public class LineLine : MonoBehaviour {
 
     void Update()
     {
-        Vector3 pointA = point0.position;
-        Vector3 pointB = point1.position;
+      //  Vector3 pointA = point0.position;
+      //  Vector3 pointB = point1.position;
         line.SetPosition(1, point1.position);
+        line.SetPosition(2, point2.position);
     }
 }

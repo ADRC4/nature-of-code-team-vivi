@@ -13,17 +13,25 @@ public class MoveSpheres : MonoBehaviour {
     int numberOfObjects = 6;
     private Transform point1;
     GameObject[] Qius;
+    List<LineRenderer> lines = new List<LineRenderer>();
 
     void Start()
     {
         if (Qiu == null)
         {
             Qiu = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            var line = Qiu.AddComponent<LineRenderer>();
+            line.positionCount = 2;
+            line.SetPosition(0, Vector3.zero);
+            line.endWidth = 0.1f;
+            line.startWidth = 0.1f;
+
             Qius = new GameObject[numberOfObjects];
 
             for (int i = 0; i < numberOfObjects; i++)
             {
-                Qius[i] = (GameObject)GameObject.Instantiate(Qiu, new Vector3(transform.position.x, 0, 0), Quaternion.identity);
+                Qius[i] = GameObject.Instantiate(Qiu, new Vector3(transform.position.x, 0, 0), Quaternion.identity);
+                lines.Add(Qius[i].GetComponent<LineRenderer>());
             }
             Qiu.SetActive(false);//hide the original
         }
@@ -51,7 +59,14 @@ public class MoveSpheres : MonoBehaviour {
                     NewMethod(i).transform.position = new Vector3(-transform.position.x, y, 0);
                 }
             }
+
+            foreach(var line in lines)
+            {
+                line.SetPosition(1, line.transform.position);
+            }
         }
+
+
     }
 
     private GameObject NewMethod(int i)

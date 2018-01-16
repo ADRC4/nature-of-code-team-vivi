@@ -39,6 +39,7 @@ public class spring : MonoBehaviour {
         cubeBody.isKinematic = cubeIsKinematic;
         cubeTransform = cubeObject.transform;
         Collider cubeCollider = cubeObject.GetComponent<Collider>();
+
         if (!cubeHasCollider && cubeCollider != null) {
             Destroy(cubeCollider);
         }

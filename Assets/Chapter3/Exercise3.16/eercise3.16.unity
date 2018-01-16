@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +109,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &736854392
 Prefab:
@@ -166,6 +170,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120365099896447426, guid: ebe92b33a6ce47e47978c5b39a9be7fe,
+        type: 2}
+      propertyPath: m_Positions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4472875446741426, guid: ebe92b33a6ce47e47978c5b39a9be7fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -208,6 +217,16 @@ Prefab:
       propertyPath: point1
       value: 
       objectReference: {fileID: 829686985}
+    - target: {fileID: 114314439367679834, guid: ebe92b33a6ce47e47978c5b39a9be7fe,
+        type: 2}
+      propertyPath: point2
+      value: 
+      objectReference: {fileID: 1727072157}
+    - target: {fileID: 120365099896447426, guid: ebe92b33a6ce47e47978c5b39a9be7fe,
+        type: 2}
+      propertyPath: m_Positions.Array.data[2].z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebe92b33a6ce47e47978c5b39a9be7fe, type: 2}
   m_IsPrefabParent: 0
@@ -391,7 +410,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &1560515940
 Transform:
   m_ObjectHideFlags: 0
@@ -405,3 +423,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1727072157 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4427334254547414, guid: 698824ad60173684aaa73b40e21bf82c,
+    type: 2}
+  m_PrefabInternal: {fileID: 736854392}
