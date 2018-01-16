@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LsystemTree : MonoBehaviour
-{//23
+{
     private string axiom = "F";
     private string current;
     private float angle;
