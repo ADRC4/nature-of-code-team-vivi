@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//dsw
+		//dswfgdf
 	}
 	
 	// Update is called once per frame
