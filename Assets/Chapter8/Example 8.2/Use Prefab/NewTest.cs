@@ -31,7 +31,7 @@ public class NewTest : MonoBehaviour
         for (int n = 3; n < 10; n++)
         {
             //Summation formula of geometric sequence/ Instantiated circles' position
-            x = diameter * diameter*(((1/2)^n) -1);
+            x = diameter*(((1/2)^n) -1);
             
             Vector3 Pos1 = new Vector3(x, 0, 0);
 
