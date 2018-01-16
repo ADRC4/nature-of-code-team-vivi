@@ -29,7 +29,10 @@ public class NewTest : MonoBehaviour
         {
              //float Scale = 1/2;
              Vector3 Pos1 = new Vector3(diameter * (1/2 ^ i), 0, 0);
-             var instantiatedPrefab_Right = Instantiate(prefab, Pos1, Quaternion.identity);
+
+            //Pos1.x=diameter*[(1/2)^1+(1/2)^2+(1/2)^3+... ...+(1/2)^i];
+
+            var instantiatedPrefab_Right = Instantiate(prefab, Pos1, Quaternion.identity);
              instantiatedPrefab_Right.transform.localScale = shrinkCircle / (2 ^ i);
         
             /*
