@@ -23,17 +23,15 @@ public class NewTest : MonoBehaviour
 
     public void instantiateNextCircles()
     {
+        //int max = 3;
 
-        for (int i = 1; i < 4; i++)
+        for (int i = 1; i < 10; i++)
         {
-            //int j = Math.Pow(2, n);
-
-            int j = 2 ^ i;
-
-            Vector3 Pos1 = new Vector3(diameter * 0.5f, 0, 0);
-            var instantiatedPrefab_Right = Instantiate(prefab, Pos1, Quaternion.identity);
-            instantiatedPrefab_Right.transform.localScale = shrinkCircle/j;
-
+             //float Scale = 1/2;
+             Vector3 Pos1 = new Vector3(diameter * (1/2 ^ i), 0, 0);
+             var instantiatedPrefab_Right = Instantiate(prefab, Pos1, Quaternion.identity);
+             instantiatedPrefab_Right.transform.localScale = shrinkCircle / (2 ^ i);
+        
             /*
              Vector3 Pos1 = new Vector3(diameter * 0.5f, 0, 0);
             var instantiatedPrefab_Right = Instantiate(prefab, Pos1, Quaternion.identity);
